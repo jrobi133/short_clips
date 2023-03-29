@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Modal, Tab } from "react-bootstrap";
 import SignUpForm from "./signup";
 import LoginForm from "./login";
+// import UploadVideoPage from "../pages/UploadVideoPage";
 
 import Auth from "../utils/auth";
 
@@ -29,9 +30,13 @@ const AppNavbar = () => {
                   <Nav.Link as={Link} to="/saved">
                     See Your Profile
                   </Nav.Link>
+                  <Nav.Link as={Link} to="/video/upload">
+                    Upload Video
+                  </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
               ) : (
+                // if user is logged in show uploadVideo page
                 <Nav.Link onClick={() => setShowModal(true)}>
                   Login/Sign Up
                 </Nav.Link>

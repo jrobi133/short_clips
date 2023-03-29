@@ -14,7 +14,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // use the routes
-app.use(routes);
+// app.use(routes);
+app.use("/api/video", require("./routes/api/video"));
+app.use("/api/user", require("./routes/api/user"));
 
 // start the server with the sequelize.sync() method
 sequelize.sync({ force: false }).then(() => {
