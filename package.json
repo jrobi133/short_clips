@@ -8,7 +8,7 @@
     "start": "node server.js",
     "start:prod": "cd server && npm start",
     "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "npm i && cd ../client && npm i",
+    "install": "npm i && cd ./client && npm i",
     "build": "cd client && npm run build"
   },
   "repository": {
