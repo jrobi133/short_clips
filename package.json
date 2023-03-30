@@ -10,7 +10,7 @@
     "start": "node server.js",
     "start:prod": "cd server && npm start",
     "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "npm i && cd ./client && npm i",
+    "install": "npm i && cd client && npm i",
     "client": "cd client && npm run start",
     "build": "cd client && npm install && npm run build",
     "heroku-postbuild": "cd client && npm run build"
