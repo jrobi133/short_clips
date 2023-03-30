@@ -10,7 +10,7 @@
     "start": "node server.js",
     "watch": "node server.js",
     "develop": "concurrently \"server && npm run watch\" \"cd client && npm start\"",
-    "install": "server && npm i && cd ./client && npm i",
+    "install": "npm i && cd ./client && npm i",
     "build": "cd client && npm run build"
   },
   "repository": {
