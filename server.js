@@ -19,6 +19,10 @@ if (process.env.NODE_ENV === "production") {
 app.use("/api/video", require("./routes/api/video"));
 app.use("/api/user", require("./routes/api/user"));
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 // start the server with the sequelize.sync() method
 // sequelize.sync({ force: false }).then(() => {
 //   app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
