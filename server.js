@@ -19,6 +19,11 @@ app.use("/api/video", require("./routes/api/video"));
 app.use("/api/user", require("./routes/api/user"));
 
 // start the server with the sequelize.sync() method
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
+// sequelize.sync({ force: false }).then(() => {
+//   app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
+// });
+
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}!`);
+  sequelize.sync({ force: false });
 });
