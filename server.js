@@ -17,13 +17,13 @@ if (process.env.NODE_ENV === "production") {
 
 // use the routes
 // app.use(routes);
-app.use(express.static(path.join(__dirname, "./client/")));
+// app.use(express.static(path.join(__dirname, "./client/build")));
 app.use("/api/video", require("./routes/api/video"));
 app.use("/api/user", require("./routes/api/user"));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 // start the server with the sequelize.sync() method
 // sequelize.sync({ force: false }).then(() => {
