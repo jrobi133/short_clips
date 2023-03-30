@@ -6,6 +6,7 @@
 
   "scripts": {
     "start": "node server.js",
+    "watch": "node server.js",
     "develop": "concurrently \"npm run watch\" \"cd client && npm start\"",
     "install": "npm install && cd ./client && npm install",
     "build": "cd client && npm run build"
