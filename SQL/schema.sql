@@ -14,3 +14,17 @@ CREATE TABLE
         `password` varchar(255) NOT NULL,
         PRIMARY KEY (`id`)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;
+
+-- create the table for Video
+
+CREATE TABLE
+    IF NOT EXISTS `Video` (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `title` varchar(255) NOT NULL,
+        `description` varchar(255) NOT NULL,
+        `url` varchar(255) NOT NULL,
+        `user_id` int(11) NOT NULL,
+        ''
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `User` (`id`)
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT = 1;

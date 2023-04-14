@@ -27,7 +27,7 @@ const LoginForm = () => {
 
     try {
       const { data } = await loginUser(userFormData);
-      let { token } = data || {};
+      let { token } = data || {}; // returns { id, email, username, token } NOTE: token can be decoded with getProfile() in utils/auth.js which gives you { id, email, username }
 
       if (!token) {
         throw new Error("Something went wrong!");

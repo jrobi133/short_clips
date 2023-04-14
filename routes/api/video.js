@@ -3,7 +3,7 @@ const router = express.Router();
 const multer = require("multer");
 var ffmpeg = require("fluent-ffmpeg");
 
-const { Video } = require("../../models/video");
+const Video = require("../../models/video");
 // const { Subscriber } = require("../models/Subscriber");
 // const { auth } = require("../middleware/auth");
 
@@ -23,7 +23,18 @@ var storage = multer.diskStorage({
   },
 });
 
-var upload = multer({ storage: storage }).single("file");
+const upload = multer({ storage: storage }).single("file");
+
+router.post("/uploadfiles", upload, (req, res) => {
+  if (!req.file) {
+    return res.send("Please select an image to upload");
+  }
+  return res.json({
+    success: true,
+    filePath: req.file.path,
+    fileName: req.file.filename,
+  });
+});
 
 //=================================
 //             User
@@ -85,14 +96,16 @@ router.get("/getVideos", (req, res) => {
     });
 });
 
-router.post("/uploadVideo", (req, res) => {
-  const video = new Video(req.body);
+router.post("/uploadVideo", async (req, res) => {
+  const videoModel = await new Video(req.body);
 
-  video.save((err, video) => {
+  await videoModel.save((err, videoResponse) => {
     if (err) return res.status(400).json({ success: false, err });
-    return res.status(200).json({
-      success: true,
-    });
+  });
+
+  return res.status(200).json({
+    success: true,
+    ...videoModel?.dataValues,
   });
 });
 
@@ -105,6 +118,7 @@ router.post("/getVideo", (req, res) => {
     });
 });
 
+module.exports = router;
 // router.post("/getSubscriptionVideos", (req, res) => {
 //   //Need to find all of the Users that I am subscribing to From Subscriber Collection
 
@@ -126,5 +140,3 @@ router.post("/getVideo", (req, res) => {
 //       });
 //   });
 // });
-
-module.exports = router;

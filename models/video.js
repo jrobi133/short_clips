@@ -1,4 +1,59 @@
-// create a model for the video table using sequelize
+// const { Model, DataTypes } = require("sequelize");
+// const sequelize = require("../config/connection.js");
+
+// class Video extends Model {}
+
+// Video.init(
+//   {
+//     writer: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//       references: {
+//         model: "user",
+//         key: "id",
+//       },
+//     },
+//     title: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+//     description: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+//     filePath: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+//     duration: {
+//       type: DataTypes.INTEGER,
+//       allowNull: false,
+//     },
+//     thumbnail: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//       field: "thumbnailPath",
+//     },
+//     user_id: {
+//       type: DataTypes.INTEGER,
+//       references: {
+//         model: "user",
+//         key: "id",
+//       },
+//     },
+//   },
+//   {
+//     sequelize,
+//     timestamps: true,
+//     freezeTableName: true,
+//     underscored: true,
+//     modelName: "video",
+//   }
+// );
+
+// console.log("Video model loaded successfully");
+// module.exports = Video;
+
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection.js");
 
@@ -7,22 +62,12 @@ class Video extends Model {}
 Video.init(
   {
     writer: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: "user",
         key: "id",
       },
-    },
-    // writer: {
-    //   type: DataTypes.File,
-    //   ref: "User",
-    // },
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
     },
     title: {
       type: DataTypes.STRING,
@@ -32,26 +77,18 @@ Video.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // privacy: {
-    //   type: Number,
-    // },
-    // filePath: {
-    //   type: String,
-    // },
-    // catogory: String,
-    // views: {
-    //   type: Number,
-    //   default: 0,
-    // },
-    // duration: {
-    //   type: String,
-    // },
-    // thumbnail: {
-    //   type: String,
-    // },
+    filePath: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    duration: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     thumbnail: {
       type: DataTypes.STRING,
       allowNull: false,
+      field: "thumbnail",
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -70,4 +107,5 @@ Video.init(
   }
 );
 
+console.log("Video model loaded successfully");
 module.exports = Video;
