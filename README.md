@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+<!-- # Short Clips -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# <div align="center">**Short Clips**</div>
 
-## Available Scripts
+## **TABLE OF CONTENTS**
 
-In the project directory, you can run:
+[1. TABLE OF CONTENTS](#TABLE-OF-CONTENTS)  
+[2. LICENSE](#LICENSE)  
+[3. PROJECT DESCRIPTION](#PROJECT-DESCRIPTION)  
+[4. APPLICATION LINKS](#APPLICATION-LINKS)  
+[5. CONTRIBUTIONS](#CONTRIBUTIONS)    
+[6. SCREENSHOT](#SCREENSHOT)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **LICENSE**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
-### `npm test`
+> This application is covered under the [MIT License](https://opensource.org/licenses/MIT)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **PROJECT DESCRIPTION**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> This is a react app that allows the users to create a profile and upload videos and watch videos that other users already uploaded. This application is using a MySQL Database, React, Node, Express, and Sequelize ORM. The application is deployed on Heroku. This application is for my final project for my time at Wilmington University's. This application is a work in progress and will be updated as I learn more and more about coding. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## **APPLICATION LINKS**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[![Website](https://img.shields.io/website?down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Fprice-tracker.app%2F)](https://short-clips.herokuapp.com)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> [GitHub Repository](https://github.com/jrobi133/short_clips)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## **CONTRIBUTIONS**
 
-## Learn More
+Please contact us for all application inqueries.
+| John Robinson | 
+| :------: | :------: | :------: | :------: |
+| <johnarobinson133@gmail.com> |
+| [github](https://github.com/jrobi133) |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## **INSTALLATION**
 
-### Code Splitting
+> 1. To Install on LocalHost: Clone [GitHub repository](https://github.com/jrobi133/short_clips) to local workspace
+> 2. Open terminal and run "npm install" on both package.json files
+> 3. Open new terminal and do an npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## **USAGE**
 
-### Making a Progressive Web App
+To use this project, do the following:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> 1. Ensure Installation Steps have been completed.
+> 2. For localhost: Open Browser and browse to URL https://localhost:3000
+> 3. On the game manager page you can create, edit and delete the cards.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **SCREENSHOT**
+![](/assets/screenshot.PNG)
+![](/assets/screenshot2.PNG)
+![](/assets/screenshot3.PNG)
