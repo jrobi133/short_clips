@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Modal, Tab } from "react-bootstrap";
 import SignUpForm from "./signup";
 import LoginForm from "./login";
-// import UploadVideoPage from "../pages/UploadVideoPage";
-
 import Auth from "../utils/auth";
 
 const AppNavbar = () => {
@@ -21,10 +19,6 @@ const AppNavbar = () => {
           <Navbar.Toggle aria-controls="navbar" />
           <Navbar.Collapse id="navbar">
             <Nav className="ml-auto">
-              {/* <Nav.Link as={Link} to="/">
-                Search For Books
-              </Nav.Link> */}
-              {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link as={Link} to="/saved">

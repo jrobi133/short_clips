@@ -2,35 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Typography, Button, Form, message, Input, Icon } from "antd";
 import Dropzone from "react-dropzone";
 import axios from "axios";
-import { useSelector } from "react-redux";
 import Auth from "../utils/auth";
 
 const { Title } = Typography;
 const { TextArea } = Input;
 
-const Private = [
-  { value: 0, label: "Private" },
-  { value: 1, label: "Public" },
-];
-
-const Catogory = [
-  { value: 0, label: "Film & Animation" },
-  { value: 0, label: "Autos & Vehicles" },
-  { value: 0, label: "Music" },
-  { value: 0, label: "Pets & Animals" },
-  { value: 0, label: "Sports" },
-];
-
 function UploadVideoPage(props) {
-  // todo user is not working
-  // const user = useSelector((state) => state.user);
   const [user, setUser] = useState({});
 
-  // const user = (state) => state.user;
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        // const response = await axios.get("/api/auth/user");
         let { exp, iat, data: decodedUserToken } = Auth.getProfile(); // NOTE: exp is when token expires, iat is when token was issued, data is the user data
 
         setUser(decodedUserToken);
@@ -44,8 +26,6 @@ function UploadVideoPage(props) {
 
   const [title, setTitle] = useState("");
   const [Description, setDescription] = useState("");
-  // const [privacy, setPrivacy] = useState(0);
-  // const [Categories, setCategories] = useState("Film & Animation");
   const [FilePath, setFilePath] = useState("");
   const [Duration, setDuration] = useState("");
   const [Thumbnail, setThumbnail] = useState("");
@@ -59,23 +39,12 @@ function UploadVideoPage(props) {
     setDescription(event.currentTarget.value);
   };
 
-  // const handleChangeOne = (event) => {
-  //   setPrivacy(event.currentTarget.value);
-  // };
-
-  // const handleChangeTwo = (event) => {
-  //   setCategories(event.currentTarget.value);
-  // };
-
   const onSubmit = (event) => {
     event.preventDefault();
-    // if (!user || user.userData) {
-    //   return alert("Please Log in First");
-    // }
+
     if (
       title === "" ||
       Description === "" ||
-      // Categories === "" ||
       FilePath === "" ||
       Duration === "" ||
       Thumbnail === ""
@@ -175,24 +144,6 @@ function UploadVideoPage(props) {
         <TextArea onChange={handleChangeDecsription} value={Description} />
         <br />
         <br />
-
-        {/* <select onChange={handleChangeOne}>
-          {Private.map((item, index) => (
-            <option key={index} value={item.value}>
-              {item.label}
-            </option>
-          ))}
-        </select>
-        <br />
-        <br />
-
-        <select onChange={handleChangeTwo}>
-          {Catogory.map((item, index) => (
-            <option key={index} value={item.label}>
-              {item.label}
-            </option>
-          ))}
-        </select> */}
         <br />
         <br />
 
